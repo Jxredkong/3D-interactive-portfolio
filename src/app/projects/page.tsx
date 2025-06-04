@@ -7,7 +7,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 
 import "@splidejs/react-splide/css";
-
+// to refactor
 const PROJECTS = [
   {
     id: 1,

@@ -51,9 +51,9 @@ const HeroSection = () => {
                           "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
                         )}
                       >
-                        {config.author.split(" ")[0]}
+                        Jared
                         <br className="md:block hiidden" />
-                        {config.author.split(" ")[1]}
+                        Kong
                         {/* PLEASE hello??
 
                         <br className="md:block hiidden" />
@@ -76,14 +76,14 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    DevOps Enthusiast
+                    Full-Stack Developer
                   </p>
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/1vjtWfqYGMIMK_rlBnmDEpKco9MiEaQss/view"
+                    "https://docs.google.com/document/d/19O_Xf9eRbBOyDckBE2MEy0jWQ31PMBH9"
                   }
                   target="_blank"
                   className="flex-1"

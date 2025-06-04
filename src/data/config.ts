@@ -1,18 +1,19 @@
+// to refactor
 const config = {
-  title: "Abhijit Zende | DevOps Enthusiast",
+  title: "Jared Kong",
   description: {
-    long: "Explore the portfolio of Abhijit, a Computer Science Engineer with 1.5 year experience in Devlopment, DevOps & Database management with hands-on experience in deploying & automating workflows, & collaborating with foreign clients. Strong analytical skills, effective communication, and a team-oriented approach to driving process improvements and delivering results.",
+    long: "Explore the portfolio of Jared, a year 2 student at Nanyang Technological University, Singapore, who is passionate about Software Development & Artificial Intelligence.",
     short:
-      "Discover the portfolio of Abhijit, a DevOps enthusiast solving real life problems in DevOps and Development.",
+      "Discover the portfolio of Jared, a software developer and AI enthusiast from Singapore.",
   },
   keywords: [
-    "Abhijit",
-    "Abhijit Zende",
-    "abhijitzende",
-    "abhijitzende.com",
-    "Abhijit Zende portfolio",
+    "Jared",
+    "Jared Kong",
+    "jaredkong",
+    "jaredkong.com",
+    "Jared Kong portfolio",
     "portfolio",
-    "DevOps",
+    "Software Developer",
     "Devlopment",
     "Database",
     "AI Docker file optimizer",
@@ -30,8 +31,8 @@ const config = {
     "AIOps",
     "Azure",
   ],
-  author: "Abhijit Zende",
-  email: "abhijitzende75@gmail.com",
+  author: "Jared Kong",
+  email: "thejaredkong@gmail.com",
   site: "https://abhijitzende.com",
 
   get ogImg() {
@@ -39,10 +40,10 @@ const config = {
   },
   social: {
     twitter: "https://x.com/_Abhi_Speaks/",
-    linkedin: "https://www.linkedin.com/in/zende-abhijit/",
+    linkedin: "https://www.linkedin.com/in/jared-kongmannhao/",
     instagram: "https://www.instagram.com/_.celestial_abhi._/",
     facebook: "https://www.facebook.com/profile.php?id=100010029821759",
-    github: "https://github.com/Abhiz2411/",
+    github: "https://github.com/Jxredkong/",
   },
 };
 export { config };

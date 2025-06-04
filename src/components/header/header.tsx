@@ -54,7 +54,6 @@ const Header = ({ loader }: HeaderProps) => {
         </Link>
 
         <OnlineUsers />
-        <FunnyThemeToggle className="w-6 h-6 mr-4" />
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}
