@@ -309,8 +309,8 @@ const projects: Project[] = [
     id: "rad",
     category: "AI and Full-Stack",
     title: "Flavour Profile Discovery",
-    src: "/assets/projects-screenshots/rad/1.png",
-    screenshots: ["1.png", "2.png", "3.png"],
+    src: "/assets/projects-screenshots/rad/2.png",
+    screenshots: ["1.gif", "2.png", "3.png"],
     live: "https://create.reallyaddictivedrinks.com/",
     github:"https://github.com/reallyAD/microSite-frontend",
     skills: {
@@ -336,7 +336,7 @@ const projects: Project[] = [
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/rad/1.png`,
+              `${BASE_PATH}/rad/1.gif`,
               `${BASE_PATH}/rad/2.png`,
               `${BASE_PATH}/rad/3.png`,
             ]}
