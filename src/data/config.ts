@@ -32,8 +32,8 @@ const config = {
     "Azure",
   ],
   author: "Jared Kong",
-  email: "thejaredkong@gmail.com",
-  site: "https://abhijitzende.com",
+  email: "jkong011@e.ntu.edu.sg",
+  site: "https://jaredkong.com",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";

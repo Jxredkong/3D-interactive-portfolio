@@ -21,6 +21,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -33,33 +34,46 @@ const ContactForm = () => {
           message,
         }),
       });
+      
       const data = await res.json();
-      if (data.error) throw new Error(data.error);
+      
+      if (!res.ok) {
+        console.error("API Error:", data);
+        throw new Error(data.error || `Server error: ${res.status}`);
+      }
+      
+      // Success
       toast({
         title: "Thank you!",
         description: "I'll get back to you as soon as possible.",
         variant: "default",
         className: cn("top-0 mx-auto flex fixed md:top-4 md:right-4"),
       });
-      setLoading(false);
+      
+      // Reset form
       setFullName("");
       setEmail("");
       setMessage("");
+      
+      // Redirect after success
       const timer = setTimeout(() => {
         router.push("/");
         clearTimeout(timer);
       }, 1000);
+      
     } catch (err) {
+      console.error("Form submission error:", err);
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: err instanceof Error ? err.message : "Something went wrong! Please try again.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
         variant: "destructive",
       });
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
