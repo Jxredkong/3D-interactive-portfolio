@@ -941,7 +941,7 @@ const projects: Project[] = [
           />
           <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
           <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
+            Dark background + shooting stars = out-of-this-world cool.
           </p>
           <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
           <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>

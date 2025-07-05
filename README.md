@@ -22,7 +22,7 @@ Here are the key highlights of my portfolio:
 - Creative motion designs that enhance storytelling and keep users engaged.
 
 ### 🌌 **Space-Themed Design**
-- Particles floating on a dark, cosmic background simulate an outer-space vibe.
+- Shooting stars streaking across a dark, cosmic background simulate an outer-space vibe.
 - Adds a unique and futuristic look to the portfolio.
 
 ### 📱 **Responsive Design**

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
-import Particles from "@/components/Particles";
+import ShootingStars from "@/components/ShootingStars";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/header";
 import { Toaster } from "@/components/ui/toaster";
@@ -69,9 +69,12 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          <Particles
+          <ShootingStars
             className="fixed inset-0 -z-10 animate-fade-in"
-            quantity={100}
+            starCount={150}
+            shootingStarCount={5}
+            minSpeed={3}
+            maxSpeed={8}
           />
           <Preloader>
             <TooltipProvider>
