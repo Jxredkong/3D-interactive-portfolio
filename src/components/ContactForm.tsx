@@ -104,7 +104,7 @@ const ContactForm = () => {
       <div className="grid w-full gap-1.5 mb-4">
         <Label htmlFor="content">Your Message</Label>
         <Textarea
-          placeholder="Tell me about about your experience at abc working on xyz,"
+          placeholder="Tell me about about your experience at abc working on xyz."
           id="content"
           required
           value={message}
