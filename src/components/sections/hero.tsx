@@ -43,8 +43,6 @@ const HeroSection = () => {
                   </p>
                 </BlurIn>
                 <BlurIn delay={1}>
-                  <Tooltip delayDuration={300}>
-                    <TooltipTrigger asChild>
                       <h1
                         className={cn(
                           "font-thin text-6xl text-transparent text-slate-800 ml-1 text-left",
@@ -54,19 +52,7 @@ const HeroSection = () => {
                         Jared
                         <br className="md:block hiidden" />
                         Kong
-                        {/* PLEASE hello??
-
-                        <br className="md:block hiidden" />
-                        UNMUTE ME 😢😢 */}
                       </h1>
-                    </TooltipTrigger>
-                    <TooltipContent
-                      side="top"
-                      className="dark:bg-white dark:text-black"
-                    >
-                      theres something waiting for you in devtools
-                    </TooltipContent>
-                  </Tooltip>
                 </BlurIn>
                 {/* <div className="md:block hidden bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 w-screen h-px animate-fade-right animate-glow" /> */}
                 <BlurIn delay={1.2}>
@@ -80,7 +66,7 @@ const HeroSection = () => {
                   </p>
                 </BlurIn>
               </div>
-              <div className="mt-8 md:ml-2 flex flex-col gap-3">
+              <div className="mt-8 md:ml-2 flex flex-col gap-3 justify-center">
                 <Link
                   href={
                     "https://docs.google.com/document/d/19O_Xf9eRbBOyDckBE2MEy0jWQ31PMBH9"
@@ -96,8 +82,6 @@ const HeroSection = () => {
                   </BoxReveal>
                 </Link>
                 <div className="md:self-start flex gap-3">
-                  <Tooltip delayDuration={300}>
-                    <TooltipTrigger asChild>
                       <Link href={"#contact"}>
                         <Button
                           variant={"outline"}
@@ -106,11 +90,6 @@ const HeroSection = () => {
                           Hire Me
                         </Button>
                       </Link>
-                    </TooltipTrigger>
-                    <TooltipContent side="bottom">
-                      <p>pls 🥹 🙏</p>
-                    </TooltipContent>
-                  </Tooltip>
                   <Link
                     href={config.social.github}
                     target="_blank"
