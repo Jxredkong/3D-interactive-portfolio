@@ -7,6 +7,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalTrigger,
+  useModal,
 } from "../ui/animated-modal";
 import { FloatingDock } from "../ui/floating-dock";
 import Link from "next/link";
@@ -31,13 +32,15 @@ const ProjectsSection = () => {
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
+          <Modall key={project.src} project={project} index={index} />
         ))}
       </div>
     </section>
   );
 };
-const Modall = ({ project }: { project: Project }) => {
+const Modall = ({ project, index }: { project: Project; index: number }) => {
+  // This component doesn't need handleClose since it's handled by the modal context
+  // The modal will close automatically when the Cancel button is clicked
   return (
     <div className="flex items-center justify-center">
       <Modal>
@@ -48,11 +51,13 @@ const Modall = ({ project }: { project: Project }) => {
               style={{ aspectRatio: "3/2" }}
             >
               <Image
-                className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
+                className="hover:scale-[1.05] transition-all object-cover"
                 src={project.src}
                 alt={project.title}
-                width={300}
-                height={300}
+                fill
+                quality={90}
+                priority={index < 3}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
                 <div className="flex flex-col h-full items-start justify-end p-6">
@@ -72,9 +77,7 @@ const Modall = ({ project }: { project: Project }) => {
             </ModalContent>
           </SmoothScroll>
           <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
+            <CloseButton />
             <Link href={project.live} target="_blank">
               <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
                 Visit
@@ -87,6 +90,18 @@ const Modall = ({ project }: { project: Project }) => {
   );
 };
 export default ProjectsSection;
+
+const CloseButton = () => {
+  const { setOpen } = useModal();
+  return (
+    <button
+      className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28"
+      onClick={() => setOpen(false)}
+    >
+      Cancel
+    </button>
+  );
+};
 
 const ProjectContents = ({ project }: { project: Project }) => {
   return (

@@ -242,7 +242,7 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <Image src="/assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI" width={24} height={24} />,
   },
   netlify: {
     title: "Netlify",
@@ -278,7 +278,7 @@ const PROJECT_SKILLS = {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <Image src="/assets/icons/icons8-java.svg" alt="Java" width={24} height={24} />,
   },
   cplusplus: {
     title: "C++",
@@ -325,12 +325,12 @@ const projects: Project[] = [
             Really Addictive Drinks, a company that specializes in creating unique and
             flavorful drinks. The app allows users to discover their ideal drink flavor profile
             by answering a series of questions. It then generates a personalized drink recipe
-            based on the user's preferences, using the OpenAI API to ensure that the recipes are
+            based on the user&apos;s preferences, using the OpenAI API to ensure that the recipes are
             both creative and tailored to individual tastes. The app is built with React and
             utilizes Tailwind CSS for styling, providing a modern and responsive design. The
             backend is powered by Node.js and Express, with MongoDB as the database to store user
-            profiles and drink recipes. The integration of OpenAI's API allows for dynamic recipe
-            generation, making each user's experience unique and engaging.
+            profiles and drink recipes. The integration of OpenAI&apos;s API allows for dynamic recipe
+            generation, making each user&apos;s experience unique and engaging.
 
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
