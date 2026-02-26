@@ -78,11 +78,13 @@ const Modall = ({ project, index }: { project: Project; index: number }) => {
           </SmoothScroll>
           <ModalFooter className="gap-4">
             <CloseButton />
-            <Link href={project.live} target="_blank">
-              <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                Visit
-              </button>
-            </Link>
+            {project.live && (
+              <Link href={project.live} target="_blank">
+                <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+                  Visit
+                </button>
+              </Link>
+            )}
           </ModalFooter>
         </ModalBody>
       </Modal>

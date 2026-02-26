@@ -415,6 +415,51 @@ const projects: Project[] = [
         </div>
       );
     },
+  },
+  { // 03. Vohack 2026
+    id: "vohack",
+    category: "Agentic Network and Full-Stack",
+    title: "🏆 Vohack 2026",
+    src: "/assets/projects-screenshots/vohack/excalidraw-canvas.png",
+    screenshots: ["excalidraw-canvas.png", "crawl-steps-details.png", "files-list.png", "file-preview.png"],
+    live: "",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.vite],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.docker, PROJECT_SKILLS.kubernetes, PROJECT_SKILLS.postgres, PROJECT_SKILLS.openai],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Vohack 2026 was an internal hackathon at Voltade, where participants were challenged to build enterprise-grade
+            features for Voltade Studio — an AI agent builder platform that provisions isolated sandbox pods on Kubernetes,
+            each running OpenCode, Mastra, and Agent OS services. I took first place by delivering two production-ready features:
+            Excalidraw MCP Live Diagramming and a Web Crawl Tool for Agent OS.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            The Excalidraw MCP integration enables the builder agent to proactively diagram architecture and flows in real time
+            on a shared canvas as it builds. I vendored and extended an open-source Excalidraw MCP server, built a mermaid-to-excalidraw
+            conversion pipeline with browser-side rendering, and integrated it into the builder UI as an always-on Canvas tab —
+            proxied through Hono&apos;s sandbox proxy into the Kubernetes pod. The agent uses 14 MCP tools to create shapes, arrows,
+            and mermaid diagrams, giving users unprecedented visibility into the AI&apos;s architectural thinking.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            The Web Crawl tool allows the builder agent to crawl any URL via the Jina Reader API, extracting content into
+            structured markdown files that are stored in Agent OS folders. It features a step-by-step UI that shows crawl progress,
+            token counts, and quality assessments, with file preview and download capabilities built into the Agent OS file browser.
+            The entire feature was integrated as an OpenCode plugin with comprehensive tests.
+          </TypographyP>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/vohack/excalidraw-canvas.png`,
+              `${BASE_PATH}/vohack/crawl-steps-details.png`,
+              `${BASE_PATH}/vohack/files-list.png`,
+              `${BASE_PATH}/vohack/file-preview.png`,
+            ]}
+          />
+        </div>
+      );
+    },
   }
 ];
 export default projects;
