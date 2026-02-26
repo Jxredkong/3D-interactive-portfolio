@@ -460,6 +460,7 @@ const projects: Project[] = [
         </div>
       );
     },
+  },
   { // 04. NTU Student Events
     id: "student-events",
     category: "Full-Stack",
