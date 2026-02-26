@@ -460,6 +460,50 @@ const projects: Project[] = [
         </div>
       );
     },
+  { // 04. NTU Student Events
+    id: "student-events",
+    category: "Full-Stack",
+    title: "NTU Student Events",
+    src: "/assets/projects-screenshots/student-events/homepage.png",
+    screenshots: ["homepage.png", "events-browse.png", "organiser-dashboard.png"],
+    live: "https://student-events.lovable.app/",
+    github: "https://github.com/FrogEvents/student-events",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn, PROJECT_SKILLS.vite, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.supabase, PROJECT_SKILLS.reactQuery],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            NTU Student Events is a full-stack event discovery and management platform built for NTU students
+            and student organisations. It features a polished, animated landing page with a custom shader gradient
+            background, scroll-snap sections for trending and recommended events, and a category-based browsing
+            experience — all designed to help students find what&apos;s happening on campus in seconds.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            The platform supports three distinct user roles: students can browse approved events, register with
+            custom form questions, save events, and follow organisers; organisers get a full dashboard with event
+            creation, analytics, registration exports, duplicate events, and a notifications inbox; and admins
+            oversee the platform with organiser approval workflows, event moderation, and platform-wide analytics.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            The frontend is built with React and TypeScript using Vite, styled with Tailwind CSS and ShadCN UI,
+            with Framer Motion for animations and a Three.js shader gradient for the landing page backdrop.
+            The backend is powered entirely by Supabase for authentication, database (Postgres), and row-level
+            security — with TanStack React Query handling all client-side data fetching and caching.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/student-events/homepage.png`,
+              `${BASE_PATH}/student-events/events-browse.png`,
+              `${BASE_PATH}/student-events/organiser-dashboard.png`,
+            ]}
+          />
+        </div>
+      );
+    },
   }
 ];
 export default projects;
