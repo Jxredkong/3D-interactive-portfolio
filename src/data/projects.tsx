@@ -337,7 +337,7 @@ const projects: Project[] = [
   { // Agentic Event Orchestrator
     id: "agentic-event-orchestrator",
     category: "Agentic AI and Full-Stack",
-    title: "Planly — Agentic Event Orchestrator",
+    title: "🥉 Planly — Agentic Event Orchestrator",
     src: "/assets/projects-screenshots/agentic-event-orchestrator/1.png",
     screenshots: ["1.png"],
     live: "https://sprightly-begonia-89fe87.netlify.app/",
@@ -350,7 +350,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Planly is a multi-agent event orchestrator built for the SgAI / AgentForge hackathon. A Mastra-based pipeline of five specialized agents (Intent, Discovery, Recommendation, Planning, Execution) parses a natural-language request, scrapes events via Bright Data and the EventFinda API, ranks them against the user&apos;s budget and interests, and proposes an optimized day plan. After a human-in-the-loop approval gate, an Execution agent books the chosen activities through ActionBook browser automation, while the React frontend streams every agent&apos;s reasoning step in real time over Server-Sent Events.
+            🥉 3rd place winner at the SgAI / AgentForge hackathon. Planly is a multi-agent event orchestrator. A Mastra-based pipeline of five specialized agents (Intent, Discovery, Recommendation, Planning, Execution) parses a natural-language request, scrapes events via Bright Data and the EventFinda API, ranks them against the user&apos;s budget and interests, and proposes an optimized day plan. After a human-in-the-loop approval gate, an Execution agent books the chosen activities through ActionBook browser automation, while the React frontend streams every agent&apos;s reasoning step in real time over Server-Sent Events.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
