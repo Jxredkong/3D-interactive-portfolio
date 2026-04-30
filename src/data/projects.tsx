@@ -340,7 +340,7 @@ const projects: Project[] = [
     title: "Planly — Agentic Event Orchestrator",
     src: "/assets/projects-screenshots/agentic-event-orchestrator/1.png",
     screenshots: ["1.png"],
-    live: "",
+    live: "https://sprightly-begonia-89fe87.netlify.app/",
     github: "https://github.com/AgentForge-Hackathon/agentic-event-orchestrator",
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.vite, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn, PROJECT_SKILLS.framerMotion, PROJECT_SKILLS.reactQuery],
