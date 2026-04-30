@@ -334,6 +334,62 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
+  { // Agentic Event Orchestrator
+    id: "agentic-event-orchestrator",
+    category: "Agentic AI and Full-Stack",
+    title: "Planly — Agentic Event Orchestrator",
+    src: "/assets/projects-screenshots/agentic-event-orchestrator/1.png",
+    screenshots: ["1.png"],
+    live: "",
+    github: "https://github.com/AgentForge-Hackathon/agentic-event-orchestrator",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.vite, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn, PROJECT_SKILLS.framerMotion, PROJECT_SKILLS.reactQuery],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express, PROJECT_SKILLS.openai, PROJECT_SKILLS.mongo, PROJECT_SKILLS.supabase],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Planly is a multi-agent event orchestrator built for the SgAI / AgentForge hackathon. A Mastra-based pipeline of five specialized agents (Intent, Discovery, Recommendation, Planning, Execution) parses a natural-language request, scrapes events via Bright Data and the EventFinda API, ranks them against the user&apos;s budget and interests, and proposes an optimized day plan. After a human-in-the-loop approval gate, an Execution agent books the chosen activities through ActionBook browser automation, while the React frontend streams every agent&apos;s reasoning step in real time over Server-Sent Events.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/agentic-event-orchestrator/1.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  { // Healthcare Companion
+    id: "healthcare-companion",
+    category: "Agentic AI and Full-Stack",
+    title: "Healthcare Companion (Ava)",
+    src: "/assets/projects-screenshots/healthcare-companion/1.png",
+    screenshots: ["1.png"],
+    live: "",
+    github: "https://github.com/synapse-hackathon/healthcare-companion-frontend",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.vite, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.supabase, PROJECT_SKILLS.openai, PROJECT_SKILLS.anthropic],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Healthcare Companion (&apos;Ava&apos;) is a hackathon project from Synapse 2026 (&apos;AI for Multimodal Remote Health and Wellness Monitoring&apos;), targeting Singapore&apos;s aging-in-place population. The React + Vite frontend delivers a voice-first chat with an animated sprite avatar, a daily &apos;Care Garden&apos; gamification layer, and separate patient and caretaker dashboards. The Bun + Hono + Mastra backend runs an Orchestrator agent that routes between Caretaker (emotional support), Medication (Supabase-backed CRUD with adherence tracking), and Schedule (Plato Medical clinic SDK) sub-agents, plus an SSE channel for proactive medication reminders. Backend repo: https://github.com/synapse-hackathon/healthcare-companion-backend.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/healthcare-companion/1.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
   { // 01. RAD MicroSite
     id: "rad",
     category: "AI and Full-Stack",
