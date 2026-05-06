@@ -3,15 +3,6 @@ import React from "react";
 import { BoxReveal } from "../reveal-animations";
 import { cn } from "@/lib/utils";
 
-const skillGroups = [
-  { label: "Languages", items: ["TypeScript", "JavaScript", "Python", "Java", "C++"] },
-  { label: "Frontend", items: ["React", "Next.js", "Vue", "Tailwind CSS", "shadcn/ui", "Framer Motion"] },
-  { label: "Backend", items: ["Node.js", "Bun", "Hono", "Express", "Mastra"] },
-  { label: "AI / Agents", items: ["OpenAI", "Anthropic", "Mastra agents", "Vercel AI SDK"] },
-  { label: "Data", items: ["PostgreSQL", "MongoDB", "Supabase", "Redis"] },
-  { label: "Infra", items: ["Docker", "Kubernetes", "AWS", "Vercel", "Netlify"] },
-];
-
 const SkillsSection = () => {
   return (
     <section id="skills" className="w-full h-screen md:h-[150dvh]">
@@ -29,27 +20,6 @@ const SkillsSection = () => {
             </h2>
           </BoxReveal>
         </Link>
-        <div className="relative z-[2] max-w-5xl mx-auto px-6 mt-10 md:mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillGroups.map((group) => (
-              <div key={group.label} className="flex flex-col gap-3">
-                <p className="text-xs uppercase tracking-widest text-zinc-400">
-                  {group.label}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

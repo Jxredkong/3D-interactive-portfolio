@@ -19,7 +19,7 @@ const AboutSection = () => {
           ABOUT
         </h2>
       </Link>
-      <div className="max-w-3xl mx-auto px-6 mt-10 md:mt-20">
+      <div className="max-w-xl px-6 mt-10 md:mt-20 md:ml-12 lg:ml-24 xl:ml-40">
         <BoxReveal width="100%">
           <TypographyP className="text-zinc-300">
             I&apos;m Jared, a Year 4 Computer Science undergrad at NTU Singapore
