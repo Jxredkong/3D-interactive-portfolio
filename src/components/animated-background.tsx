@@ -10,6 +10,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePreloader } from "./preloader";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import { useReducedMotion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,6 +115,9 @@ const AnimatedBackground = () => {
   const { isLoading, bypassLoading } = usePreloader();
   const { theme } = useTheme();
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const isLgUp = useMediaQuery("(min-width: 1024px)");
+  const prefersReducedMotion = useReducedMotion();
+  const showSpline = isLgUp && !prefersReducedMotion;
   const splineContainer = useRef<HTMLDivElement>(null);
   const [splineApp, setSplineApp] = useState<Application>();
 
@@ -298,7 +302,6 @@ const AnimatedBackground = () => {
     await sleep(400);
     kbd.visible = true;
     setKeyboardRevealed(true);
-    console.log(activeSection);
     gsap.fromTo(
       kbd?.scale,
       { x: 0.01, y: 0.01, z: 0.01 },
@@ -559,6 +562,18 @@ const AnimatedBackground = () => {
     };
     return { start, stop };
   };
+  // Bypass preloader on devices that won't render Spline so the rest of the
+  // page is not blocked behind a loader that never resolves.
+  useEffect(() => {
+    if (!showSpline && isLoading) {
+      bypassLoading();
+    }
+  }, [showSpline, isLoading, bypassLoading]);
+
+  if (!showSpline) {
+    return <div className="absolute inset-0 -z-10 bg-background" aria-hidden />;
+  }
+
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

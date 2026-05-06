@@ -14,7 +14,7 @@ function MainPage() {
   return (
     <>
       <SmoothScroll>
-        <main className={cn("bg-slate-100 dark:bg-transparent snap-y snap-mandatory")}>
+        <main className={cn("bg-slate-100 dark:bg-transparent snap-y snap-proximity")}>
           <div className="top-0 z-0 fixed w-full h-screen">
             <AnimatedBackground />
           </div>

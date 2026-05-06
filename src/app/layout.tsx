@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import ShootingStars from "@/components/ShootingStars";
@@ -13,35 +13,53 @@ import EasterEggs from "@/components/easter-eggs";
 import { config } from "@/data/config";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(config.site),
   title: config.title,
   description: config.description.long,
   keywords: config.keywords,
   authors: [{ name: config.author }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: config.title,
-    description: config.description.short,
+    type: "website",
+    siteName: "Jared Kong",
+    locale: "en_SG",
     url: config.site,
+    title: config.title,
+    description: config.description.long,
     images: [
       {
-        url: config.ogImg,
-        width: 800,
-        height: 600,
-        alt: "Portfolio preview",
+        url: "/assets/seo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jared Kong — Full-Stack & AI Agent Engineer",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: config.title,
-    description: config.description.short,
-    images: [config.ogImg],
+    description: config.description.long,
+    images: ["/assets/seo/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
 };
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
+  colorScheme: "dark",
+};
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
@@ -54,7 +72,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[archivoBlack.className].join(" ")}>
+    <html
+      lang="en"
+      className={[archivoBlack.className, inter.variable].join(" ")}
+    >
       <head>
         <Script
           defer

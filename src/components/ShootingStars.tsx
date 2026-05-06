@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 
 interface ShootingStarsProps {
   className?: string;
@@ -53,14 +52,11 @@ export default function ShootingStars({
   shootingStarColor,
   backgroundColor,
 }: ShootingStarsProps) {
-  const { theme } = useTheme();
-  
-  // Theme-aware defaults
-  const defaultStarColor = starColor || (theme === "dark" ? "#ffffff" : "#000000");
-  const defaultShootingStarColor = shootingStarColor || (theme === "dark" ? "#60a5fa" : "#3b82f6");
-  const defaultBackgroundColor = backgroundColor || (theme === "dark" 
-    ? "bg-black dark:bg-black" 
-    : "bg-gradient-to-b from-gray-900 via-black to-gray-900");
+  // Deterministic dark-theme defaults — site has no real light theme.
+  // Avoiding `useTheme()` here prevents an SSR/CSR className mismatch.
+  const defaultStarColor = starColor || "#ffffff";
+  const defaultShootingStarColor = shootingStarColor || "#60a5fa";
+  const defaultBackgroundColor = backgroundColor || "bg-black";
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);

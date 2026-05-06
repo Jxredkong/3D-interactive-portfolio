@@ -17,6 +17,9 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
+const isVideo = (path: string) =>
+  path.endsWith(".mp4") || path.endsWith(".webm");
+
 const SlideShow = ({ images }: { images: string[] }) => {
   const [hovering, setHovering] = useState(false);
   return (
@@ -40,13 +43,25 @@ const SlideShow = ({ images }: { images: string[] }) => {
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
               >
-                <Image
-                  src={image}
-                  alt="screenshot"
-                  width={1000}
-                  height={1000}
-                  className="w-full rounded-lg h-auto"
-                />
+                {isVideo(image) ? (
+                  <video
+                    src={image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="w-full rounded-lg h-auto"
+                  />
+                ) : (
+                  <Image
+                    src={image}
+                    alt="screenshot"
+                    width={1000}
+                    height={1000}
+                    className="w-full rounded-lg h-auto"
+                  />
+                )}
                 <AnimatePresence>
                   {hovering && (
                     <motion.div
@@ -67,14 +82,28 @@ const SlideShow = ({ images }: { images: string[] }) => {
                     {image.split("/").pop()}
                   </DialogDescription>
                 </DialogHeader>
-                <Image
-                  src={image}
-                  alt="screenshot"
-                  width={1000}
-                  height={1000}
-                  className="w-full"
-                  style={{ objectFit: "contain", width: "100vw" }}
-                />
+                {isVideo(image) ? (
+                  <video
+                    src={image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    preload="metadata"
+                    className="w-full"
+                    style={{ objectFit: "contain", width: "100vw" }}
+                  />
+                ) : (
+                  <Image
+                    src={image}
+                    alt="screenshot"
+                    width={1000}
+                    height={1000}
+                    className="w-full"
+                    style={{ objectFit: "contain", width: "100vw" }}
+                  />
+                )}
               </DialogContent>
             </Dialog>
           </SplideSlide>

@@ -45,13 +45,13 @@ const Modall = ({ project, index }: { project: Project; index: number }) => {
     <div className="flex items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
-          <div className="p-[2px] rounded-lg bg-gradient-to-r from-brand/50 via-brand to-brand/50 shadow-[0_0_20px_rgba(139,69,255,0.5)]">
+          <div className="p-[2px] rounded-lg bg-gradient-to-r from-brand/50 via-brand to-brand/50 shadow-[0_0_20px_rgba(139,69,255,0.5)] w-full max-w-[400px] mx-auto">
             <div
-              className="relative w-[400px] h-auto rounded-lg overflow-hidden bg-white/70 dark:bg-black/70 backdrop-blur-sm"
+              className="relative w-full max-w-[400px] mx-auto h-auto rounded-lg overflow-hidden bg-white/70 dark:bg-black/70 backdrop-blur-sm"
               style={{ aspectRatio: "3/2" }}
             >
               <Image
-                className="hover:scale-[1.05] transition-all object-cover"
+                className="hover:scale-[1.05] transition-transform object-cover"
                 src={project.src}
                 alt={project.title}
                 fill
@@ -79,10 +79,12 @@ const Modall = ({ project, index }: { project: Project; index: number }) => {
           <ModalFooter className="gap-4">
             <CloseButton />
             {project.live && (
-              <Link href={project.live} target="_blank">
-                <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                  Visit
-                </button>
+              <Link
+                href={project.live}
+                target="_blank"
+                className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28 inline-flex items-center justify-center"
+              >
+                Visit
               </Link>
             )}
           </ModalFooter>
