@@ -7,7 +7,7 @@ import { BoxReveal } from "../reveal-animations";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="min-h-screen max-w-7xl mx-auto">
+    <section id="about" className="h-screen max-w-7xl mx-auto">
       <Link href={"#about"}>
         <h2
           className={cn(
