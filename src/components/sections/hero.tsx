@@ -76,10 +76,10 @@ const HeroSection = () => {
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3 justify-center">
                 <Link
-                  href={
-                    "https://docs.google.com/document/d/19O_Xf9eRbBOyDckBE2MEy0jWQ31PMBH9"
-                  }
+                  href="/assets/Resume_Jared_March.pdf"
                   target="_blank"
+                  rel="noopener"
+                  download
                   className="flex-1"
                 >
                   <BoxReveal delay={2} width="100%" >
