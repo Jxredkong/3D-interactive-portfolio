@@ -115,9 +115,9 @@ const AnimatedBackground = () => {
   const { isLoading, bypassLoading } = usePreloader();
   const { theme } = useTheme();
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const isLgUp = useMediaQuery("(min-width: 1024px)");
+  const isMdUp = useMediaQuery("(min-width: 768px)");
   const prefersReducedMotion = useReducedMotion();
-  const showSpline = isLgUp && !prefersReducedMotion;
+  const showSpline = isMdUp && !prefersReducedMotion;
   const splineContainer = useRef<HTMLDivElement>(null);
   const [splineApp, setSplineApp] = useState<Application>();
 
