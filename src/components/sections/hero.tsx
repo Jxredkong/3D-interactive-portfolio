@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
-import { File, Github, Linkedin } from "lucide-react";
+import { File } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -50,7 +50,7 @@ const HeroSection = () => {
                         )}
                       >
                         Jared
-                        <br className="md:block hiidden" />
+                        <br className="md:block hidden" />
                         Kong
                       </h1>
                 </BlurIn>
@@ -62,7 +62,15 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    Full-Stack Developer
+                    Full-Stack &amp; AI Agent Engineer
+                  </p>
+                  <p
+                    className={cn(
+                      "md:self-start mt-2 font-thin text-zinc-400 text-sm ml-3",
+                      "cursor-default font-display"
+                    )}
+                  >
+                    Singapore &middot; Year 4 NTU CS &middot; Open to new-grad &amp; internship roles
                   </p>
                 </BlurIn>
               </div>
@@ -87,7 +95,7 @@ const HeroSection = () => {
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Hire Me
+                          Get in touch
                         </Button>
                       </Link>
                   <Link

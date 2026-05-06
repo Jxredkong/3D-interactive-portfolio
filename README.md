@@ -1,109 +1,83 @@
-# 🚀 My Portfolio Website
+# 🚀 Jared Kong — Portfolio
 
-Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills, projects, and personality in a visually stunning and interactive manner.
-
-### Live preview: https://www.abhijitzende.com/
-
-https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/preview_video.mp4
-
-This project is **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Naresh! 🙏
+Welcome to the source for [**jaredkong.com**](https://jaredkong.com) — my personal portfolio. I'm Jared Kong, a Full-Stack & AI Agent Engineer based in Singapore, currently in Year 4 Computer Science at NTU (graduating Dec 2027) and building agentic AI products as a software engineer at Voltade. This site is where I show off the work, the wins, and the weird-fun side of how I build things on the web. ✨
 
 ## 🔥 Features
 
-Here are the key highlights of my portfolio:
+### 🎹 **3D Interactive Keyboard**
+- A custom **Spline** scene where each keycap is a skill — hover to reveal titles and descriptions.
+- Smooth, responsive 3D interactions designed to be playful but informative.
 
-### 🎹 **3D Interactive Animations**
-- Features a custom-made interactive keyboard built with **Spline**.
-- Each keycap represents a skill and reveals titles and descriptions on hover for an immersive experience.
-- Smooth, responsive 3D interactions that captivate visitors.
-
-### ✨ **Slick Interactions & Animations**
-- Powered by **GSAP** and **Framer Motion**, delivering buttery-smooth animations on scroll, hover, and element reveals.
-- Creative motion designs that enhance storytelling and keep users engaged.
+### ✨ **Slick Motion**
+- Powered by **GSAP** and **Framer Motion** for buttery scroll, hover, and reveal animations.
+- Motion serves the storytelling — never decorative for its own sake.
 
 ### 🌌 **Space-Themed Design**
-- Shooting stars streaking across a dark, cosmic background simulate an outer-space vibe.
-- Adds a unique and futuristic look to the portfolio.
+- Shooting stars across a dark cosmic backdrop set the mood.
+- Just the right amount of "futuristic" without sliding into cliché.
 
-### 📱 **Responsive Design**
-- Fully responsive layout ensures the website looks and functions beautifully on all devices.
-- Optimized for both desktop and mobile experiences.
+### 📱 **Responsive by Default**
+- Looks and feels right from a phone in the lift to a 27" desktop.
 
-### 🧠 **Innovative Web Design**
-- Combines cutting-edge technology with an intuitive user experience.
-- Creative use of animations and visuals to push the boundaries of modern web design.
+### 📬 **Working Contact Form**
+- Powered by **Resend** — messages land directly in my inbox.
 
 ## 🛠️ Tech Stack
 
-The portfolio website is built using the following tools and technologies:
-
-- **Frontend:** Next.js, React, Tailwind CSS, Shadcn, Aceternity UI
-- **Animations:** GSAP, Framer Motion, Spline Runtime
-- **Other Tools:** Resend, Socket.io, Zod
+- **Framework:** Next.js 14, React 18, TypeScript
+- **Styling:** Tailwind CSS, shadcn/ui, Aceternity UI
+- **3D & Animation:** Spline, GSAP, Framer Motion
+- **Email:** Resend
 
 ## 🌟 Getting Started
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Abhiz2411/3D-interactive-portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
+   git clone https://github.com/Jxredkong/3D-interactive-portfolio.git
    cd 3D-interactive-portfolio
    ```
 
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Set up environment variables:
+3. Set up environment variables — create `.env.local` in the project root:
    ```bash
-   # Create a .env.local file in the root directory
-   touch .env.local
-
-   # Add your Resend API key
    RESEND_API_KEY=your_resend_api_key_here
    ```
 
-5. Start the development server:
+4. Start the dev server:
    ```bash
    npm run dev
    ```
 
-6. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+5. Open [http://localhost:3000](http://localhost:3000).
 
 ## 🚀 Deployment
 
-This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://www.abhijitzende.com/).
+Deployed on **Vercel** for instant global delivery. To replicate:
 
-### Setting up Resend API on Vercel
+1. Push this repo to your own GitHub account.
+2. Import the project in Vercel.
+3. Under **Project Settings → Environment Variables**, add:
+   - `RESEND_API_KEY` — your [Resend](https://resend.com) API key.
+4. Deploy. That's it. 🎉
 
-1. Sign up for a [Resend](https://resend.com) account and get your API key
-2. Go to your Vercel project settings
-3. Navigate to the "Environment Variables" section
-4. Add a new environment variable:
-   - Name: `RESEND_API_KEY`
-   - Value: Your Resend API key
-5. Save the changes and redeploy your application
-
-Note: Make sure to keep your API key secret and never commit it to your repository.
+> ⚠️ Never commit your `.env.local` or any API keys.
 
 ## 💖 Acknowledgments
 
-A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.
+This portfolio was forked from [Abhijit Zende's 3D-interactive-portfolio](https://github.com/Abhiz2411/3D-interactive-portfolio), which itself was inspired by [Naresh Khatri's portfolio](https://github.com/Naresh-Khatri/Portfolio). Massive thanks to both for the foundation. 🙏 Significant customisation has been done since the fork — copy, content, components, config, and feel are all my own.
 
 ## 📬 Contact
 
-Feel free to reach out to me for collaboration, feedback, or just to say hi! 😊
+Always happy to chat about software, AI agents, hackathons, or interesting problems.
 
-- **Email:** abhijitzende75@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/zende-abhijit/)
+- **Email:** [thejaredkong@gmail.com](mailto:thejaredkong@gmail.com)
+- **LinkedIn:** [jared-kongmannhao](https://www.linkedin.com/in/jared-kongmannhao/)
+- **GitHub:** [@Jxredkong](https://github.com/Jxredkong/)
 
 ---
 
-⭐ If you like this project, don't forget to give it a star!
+⭐ If you like the project, drop a star — it makes my day.

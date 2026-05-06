@@ -20,34 +20,35 @@ const EasterEggs = () => {
     if (typeof console !== "undefined") {
       console.clear();
       console.log(
-        "%cWhoa, look at you! 🕵️‍♂️\n" +
-          "You seem to have discovered the secret console! 🔍\n" +
-          "Want to see some magic? ✨\n" +
-          "Just type %cmy first name%c and hit enter! 🎩🐇",
-        //   "Just press the %c'n'%c key and watch the magic happen! 🪄",
-        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
-        "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
-        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
+        "%c🌌 Welcome, traveler.\n" +
+          "Whisper my name into the void and the stars will answer.\n" +
+          "Try typing %cmy first name%c and pressing enter.",
+        "color: #E6F1FF; font-size: 16px; font-weight: bold; background: linear-gradient(90deg, #0b1026, #1a1a40); padding: 10px; border-radius: 10px; margin-top:20px",
+        "color: #67E8F9; font-size: 16px; font-weight: bold; background: linear-gradient(90deg, #0b1026, #1a1a40); padding: 10px; border-radius: 10px; margin-top:20px",
+        "color: #E6F1FF; font-size: 16px; font-weight: bold; background: linear-gradient(90deg, #0b1026, #1a1a40); padding: 10px; border-radius: 10px;"
       );
 
-      ["naresh", "Naresh", "NARESH"].forEach((name) => {
+      ["jared", "Jared", "JARED"].forEach((name) => {
         // @ts-ignore
         if (Object.hasOwn(window, name)) return;
         Object.defineProperty(window, name, {
           get() {
             console.log(
-              "%c✨ Abra Kadabra! ✨\n\n" +
-                "You just summoned the magic of Naresh! 🧙‍♂️\n" +
-                "What??? youre not impressed? Fine, but remember: With great power comes great responsibility! 💻⚡",
+              "%c🚀 Signal detected. Decoding constellation...\n\n" +
+                "  ✦ Identity: Jared Kong — full-stack & agentic AI engineer\n" +
+                "  ✦ Currently: orchestrating multi-agent networks in TypeScript @ Voltade\n" +
+                "  ✦ Trophy case: 1× hackathon gold, 1× bronze\n" +
+                "  ✦ Status: open to new-grad SWE roles\n\n" +
+                "  → hire signal acknowledged: thejaredkong@gmail.com",
 
-              "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:10px"
+              "color: #E6F1FF; font-size: 15px; font-weight: bold; background: linear-gradient(135deg, #0b1026, #1a1a40, #2a1a5e); padding: 12px; border-radius: 10px; margin-top:10px; border: 1px solid #67E8F9"
             );
 
             const timer = setTimeout(() => {
               console.log(
-                "%cPssttt! 🤫\n\n" +
-                  "Do you like cats?? 😺 If yes, then press 'n' on viewport and see what happens! 🐱✨",
-                "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
+                "%c✨ Pssst, fellow stargazer...\n\n" +
+                  "If you like cats, press 'n' on the viewport and watch the cosmos purr. 🐱🌠",
+                "color: #C4B5FD; font-size: 14px; font-weight: bold; background: linear-gradient(90deg, #0b1026, #1a1a40); padding: 10px; border-radius: 10px;"
               );
               clearTimeout(timer);
             }, 7000);

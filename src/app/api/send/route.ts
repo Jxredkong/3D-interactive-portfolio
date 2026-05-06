@@ -3,34 +3,30 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
   email: z.string().email({ message: "Email is invalid!" }),
-  message: z.string().min(10, "Message is too short!"),
+  message: z.string().min(10, "Message is too short!").max(2000),
 });
 export async function POST(req: Request) {
   try {
-    // Check if RESEND_API_KEY is configured
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY is not configured");
-      return Response.json({ error: "Email service not configured" }, { status: 500 });
-    }
-
     const body = await req.json();
-    console.log("Request body:", body);
-    
+
     const {
       success: zodSuccess,
       data: zodData,
       error: zodError,
     } = Email.safeParse(body);
-    
+
     if (!zodSuccess) {
       console.error("Validation error:", zodError);
       return Response.json({ error: zodError?.message }, { status: 400 });
     }
+
+    if (!process.env.RESEND_API_KEY) {
+      return Response.json({ error: "Email service not configured" }, { status: 500 });
+    }
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     console.log("Sending email to:", config.email);
     const { data: resendData, error: resendError } = await resend.emails.send({

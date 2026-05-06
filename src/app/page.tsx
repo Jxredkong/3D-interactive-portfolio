@@ -4,6 +4,7 @@ import React from "react";
 import SmoothScroll from "@/components/smooth-scroll";
 import { cn } from "@/lib/utils";
 import AnimatedBackground from "@/components/animated-background";
+import AboutSection from "@/components/sections/about";
 import SkillsSection from "@/components/sections/skills";
 import ProjectsSection from "@/components/sections/projects";
 import ContactSection from "@/components/sections/contact";
@@ -19,6 +20,9 @@ function MainPage() {
           </div>
           <section className="snap-start snap-always">
             <HeroSection />
+          </section>
+          <section className="snap-start snap-always" id="about">
+            <AboutSection />
           </section>
           <section className="snap-start snap-always">
             <SkillsSection />

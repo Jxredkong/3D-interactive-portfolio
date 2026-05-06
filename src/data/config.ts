@@ -1,10 +1,10 @@
 // to refactor
 const config = {
-  title: "Jared Kong",
+  title: "Jared Kong — Full-Stack & AI Agent Engineer",
   description: {
-    long: "Explore the portfolio of Jared, a year 2 student at Nanyang Technological University, Singapore, who is passionate about Software Development & Artificial Intelligence.",
+    long: "Jared Kong — Full-Stack & AI Agent Engineer based in Singapore. Year 4 Computer Science at NTU (graduating Dec 2027). Currently a software engineer at Voltade building agentic AI products. Recent hackathon wins: 1st at Vohack 2026, 3rd at SgAI/AgentForge.",
     short:
-      "Discover the portfolio of Jared, a software developer and AI enthusiast from Singapore.",
+      "Full-Stack & AI Agent Engineer based in Singapore. Year 4 NTU CS, graduating Dec 2027. SWE @ Voltade.",
   },
   keywords: [
     "Jared",
@@ -14,10 +14,8 @@ const config = {
     "Jared Kong portfolio",
     "portfolio",
     "Software Developer",
-    "Devlopment",
+    "Development",
     "Database",
-    "AI Docker file optimizer",
-    "Finance me",
     "creative technologist",
     "web development",
     "interactive websites",
@@ -30,19 +28,25 @@ const config = {
     "DevSecOps",
     "AIOps",
     "Azure",
+    "Mastra",
+    "agentic AI",
+    "multi-agent",
+    "Voltade",
+    "AutoThought",
+    "Planly",
+    "Vohack",
+    "NTU",
+    "Singapore",
   ],
   author: "Jared Kong",
-  email: "jkong011@e.ntu.edu.sg",
+  email: "thejaredkong@gmail.com",
   site: "https://jaredkong.com",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/_Abhi_Speaks/",
     linkedin: "https://www.linkedin.com/in/jared-kongmannhao/",
-    instagram: "https://www.instagram.com/_.celestial_abhi._/",
-    facebook: "https://www.facebook.com/profile.php?id=100010029821759",
     github: "https://github.com/Jxredkong/",
   },
 };
